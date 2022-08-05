@@ -55,7 +55,7 @@ export const paytmResponse = (request, response) => {
           });
           post_res.on("end", function () {
             let result = JSON.parse(res);
-            response.redirect("https://ranbirsfllipkart.herokuapp.com");
+            response.redirect("https://ranbirsfllipkart.herokuapp.com/");
           });
         });
         post_req.write(post_data);

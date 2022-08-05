@@ -47,6 +47,6 @@ paytmParams["ORDER_ID"] = uuid();
 paytmParams["CUST_ID"] = process.env.PAYTM_CUST_ID;
 paytmParams["TXN_AMOUNT"] = "100";
 // after payment gateway success or failure, the url need to navigate
-paytmParams["CALLBACK_URL"] = "https://ranbirsfllipkart.herokuapp.com/";
+paytmParams["CALLBACK_URL"] = "https://ranbirsfllipkart.herokuapp.com";
 paytmParams["EMAIL"] = "mranbir07@gmail.com";
 paytmParams["MOBILE_NO"] = "9876543210";
