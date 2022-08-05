@@ -19,13 +19,10 @@ const BoxWrapper = styled(Box)(({ theme }) => ({
   height: "65vh",
   width: "80%",
   background: "#fff",
-  margin: "80px 140px",
-  [theme.breakpoints.down("md")]: {
-    width: "100%",
-    height: "100vh",
-    background: "#000",
+  margin: "10% auto",
+  [theme.breakpoints.down("sm")]: {
     display: "flex",
-    margin: "0",
+    margin: "40% auto",
   },
 }));
 const BoxContainer = styled(Box)`

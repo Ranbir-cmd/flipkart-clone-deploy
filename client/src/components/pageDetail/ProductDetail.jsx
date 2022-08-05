@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Box,
-  Grid,
   styled,
   Table,
   TableBody,
@@ -67,14 +66,18 @@ const ProductDetail = ({ product }) => {
       <Table>
         <TableBody>
           <ColumnText>
-            <TableCell style={{ color: "#878787" }}>Delivery</TableCell>
-            <TableCell style={{ fontWeight: 600 }}>
+            <StyledTableCell style={{ color: "#878787" }}>
+              Delivery
+            </StyledTableCell>
+            <StyledTableCell style={{ fontWeight: 600 }}>
               Delivery By {deliveryDate.toDateString()} | ₹40
-            </TableCell>
+            </StyledTableCell>
           </ColumnText>
           <ColumnText>
-            <TableCell style={{ color: "#878787" }}>Seller</TableCell>
-            <TableCell>
+            <StyledTableCell style={{ color: "#878787" }}>
+              Seller
+            </StyledTableCell>
+            <StyledTableCell>
               <Box style={{ color: "#2874f0", fontSize: 16, fontWeight: 600 }}>
                 SuperNet
               </Box>
@@ -85,16 +88,18 @@ const ProductDetail = ({ product }) => {
               <Typography>
                 View more sellers starting from ₹{product.price.cost}
               </Typography>
-            </TableCell>
+            </StyledTableCell>
           </ColumnText>
           <ColumnText>
-            <TableCell colSpan={2}>
-              <img src={adURL} style={{ width: 390 }} alt="supercoin" />
-            </TableCell>
+            <StyledTableCell colSpan={2}>
+              <CellImg src={adURL} style={{ width: 390 }} alt="supercoin" />
+            </StyledTableCell>
           </ColumnText>
           <ColumnText>
-            <TableCell style={{ color: "#878787" }}>Description</TableCell>
-            <TableCell>{product.description}</TableCell>
+            <StyledTableCell style={{ color: "#878787" }}>
+              Description
+            </StyledTableCell>
+            <StyledTableCell>{product.description}</StyledTableCell>
           </ColumnText>
         </TableBody>
       </Table>
@@ -124,11 +129,25 @@ const EmiStyled = styled(Emi)`
 const ColumnText = styled(TableRow)`
   font-size: 14px;
   vertical-align: baseline;
-  & > td {
-    margin-top: 10px;
-    font-size: 14px;
-    border: none;
-  }
 `;
+
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  marginTop: 10,
+  fontSize: 14,
+  border: "none",
+
+  [theme.breakpoints.down("sm")]: {
+    fontSize: 12,
+    colSpan: 1,
+  },
+}));
+
+const CellImg = styled("img")(({ theme }) => ({
+  width: "100%",
+  // marginTop: 10,
+  [theme.breakpoints.down("sm")]: {
+    display: "none",
+  },
+}));
 
 export default ProductDetail;

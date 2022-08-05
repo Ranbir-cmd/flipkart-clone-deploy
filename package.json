@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "It is a clone of Indian famous e-commerce app",
   "main": "server.js",
   "type": "module",
   "scripts": {
