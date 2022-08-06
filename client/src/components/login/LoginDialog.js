@@ -126,7 +126,13 @@ const LoginDialog = ({ open, setOpen }) => {
                 By continuing, you agree to Flipkart's Terms of Use and Privacy
                 Policy.
               </Typography>
-              <LoginButton onClick={() => loginUser()}>Login</LoginButton>
+              <LoginButton
+                variant="contained"
+                style={{ background: "#fff" }}
+                onClick={() => loginUser()}
+              >
+                Login
+              </LoginButton>
               <Typography style={{ textAlign: "center", color: "#666" }}>
                 OR
               </Typography>
@@ -184,7 +190,13 @@ const LoginDialog = ({ open, setOpen }) => {
                 onChange={(e) => onInputChange(e)}
               />
 
-              <LoginButton onClick={() => onFormSubmit()}>Continue</LoginButton>
+              <LoginButton
+                variant="contained"
+                style={{ background: "#fff" }}
+                onClick={() => onFormSubmit()}
+              >
+                Continue
+              </LoginButton>
             </TextWrapper>
           )}
         </Box>
@@ -225,7 +237,7 @@ const TextWrapper = styled(Box)`
 const LoginButton = styled(Button)`
   text-transform: none;
   background: #fb641b;
-  color: #fff;
+
   height: 48px;
   border-radius: 2px;
   padding: 10px;

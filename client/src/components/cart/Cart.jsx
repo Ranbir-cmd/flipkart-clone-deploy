@@ -38,6 +38,8 @@ const Cart = () => {
             ))}
             <ButtonWrapper>
               <StyledButton
+                variant="contained"
+                style={{ background: "#fff" }}
                 onClick={() => {
                   buyNow();
                 }}
@@ -79,7 +81,7 @@ const StyledButton = styled(Button)`
   display: flex;
   margin-left: auto;
   background: #fb641b;
-  color: #fff;
+
   padding: 15px 36px;
   width: 250px;
   border-radius: 2px;
