@@ -24,7 +24,11 @@ const CustomButtons = () => {
       {acc ? (
         <Profile profilename={acc} setProfilename={setAcc} />
       ) : (
-        <LoginButton variant="contained" onClick={() => openDialog()}>
+        <LoginButton
+          variant="contained"
+          style={{ background: "#fff" }}
+          onClick={() => openDialog()}
+        >
           Login
         </LoginButton>
       )}
@@ -68,7 +72,6 @@ const CartWrapper = styled(Link)(({ theme }) => ({
 }));
 
 const LoginButton = styled(Button)`
-  background: #fff;
   color: #2874f0;
   text-transform: none;
   font-weight: 600;
