@@ -128,7 +128,7 @@ const LoginDialog = ({ open, setOpen }) => {
               </Typography>
               <LoginButton
                 variant="contained"
-                style={{ background: "#fff" }}
+                style={{ background: "#FB641B" }}
                 onClick={() => loginUser()}
               >
                 Login
@@ -192,7 +192,7 @@ const LoginDialog = ({ open, setOpen }) => {
 
               <LoginButton
                 variant="contained"
-                style={{ background: "#fff" }}
+                style={{ background: "#FB641B" }}
                 onClick={() => onFormSubmit()}
               >
                 Continue
@@ -236,7 +236,7 @@ const TextWrapper = styled(Box)`
 `;
 const LoginButton = styled(Button)`
   text-transform: none;
-  background: #fb641b;
+  color: #fff;
 
   height: 48px;
   border-radius: 2px;
